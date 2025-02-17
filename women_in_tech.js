@@ -15,24 +15,28 @@ function initSuccessStoryForm() {
         if (!name || !story) return;
 
         // Create a Bootstrap container for better layout control
-        const storyWrapper = document.createElement("div");
-        storyWrapper.classList.add("container", "story-container");
+        const storyWrapper = document.createElement("div");//main wrapper 
+        storyWrapper.classList.add("container", "mt-4");
 
-        const row = document.createElement("div");
+        const row = document.createElement("div");//center content
         row.classList.add("row", "justify-content-center");
 
         const col = document.createElement("div");
-        col.classList.add("col-md-8", "col-lg-6");
+        col.classList.add("col-md-8", "col-lg-6");//responsive column sizes
 
         // Create the story card
         const card = document.createElement("div");
-        card.classList.add("card", "mt-3", "p-3", "text-white", "bg-dark", "shadow");
+        card.classList.add("card", "mt-3", "p-3", "text-white", "bg-dark", "shadow-lg", "rounded");
+        
+        //card innerHTML
         card.innerHTML = `
             <div class="card-body">
                 <h4 class="card-title text-warning">${name}</h4>
                 <p class="card-text">${story}</p>
+                <div class="d-flex justify-content-end">
                 <button class="btn btn-danger mt-3 remove-story">❌ Remove</button>
-            </div>`;
+            </div>
+        </div>`;
 
         // Append elements to structure properly
         col.appendChild(card);
@@ -52,7 +56,7 @@ function initSuccessStoryForm() {
         // Remove story on button click
         card.querySelector(".remove-story").addEventListener("click", () => {
             card.style.opacity = "0";
-            setTimeout(() => storyWrapper.remove(), 500);
+            setTimeout(() => storyWrapper.remove(), 500);//removes
         });
     });
 }
@@ -238,9 +242,6 @@ function showRandomEmoji() {
         emojiDisplay.style.transform = "scale(1)";
     }, 200);
     
-function goHome() {
-    window.location.href = "index.html";
-}
 }
 // Navigation Function
 window.goHome = function () {
