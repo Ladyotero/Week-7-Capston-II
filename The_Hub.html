@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Future in Technology</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imagemapster/1.5.4/jquery.imagemapster.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/davidjbradshaw/image-map-resizer/js/imageMapResizer.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    </script>
+    <style>
+        body {
+            background: linear-gradient(to right, #111827, #1f2937);
+            color: #f3f4f6;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        /* Interactive Links */
+        a {
+            color: #3b82f6;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #60a5fa;
+            text-decoration: underline;
+        }
+
+        /* Carousel Styling */
+        .carousel {
+            margin: 40px auto;
+            width: 90%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-inner {
+            border-radius: 15px;
+        }
+
+        .carousel-item img {
+            object-fit: cover;
+            height: 500px;
+            border-radius: 15px;
+        }
+
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        /* Cards */
+        .card {
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: #f3f4f6;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Interactive Buttons */
+        .btn-primary {
+            background: linear-gradient(45deg, #4f46e5, #6366f1);
+            border: none;
+            font-size: 1rem;
+            padding: 10px 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 5px 15px rgba(79, 70, 229, 0.5);
+        }
+
+        /* Gradient Buttons */
+        .btn-gradient {
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 10px;
+            transition: 0.3s ease;
+        }
+
+        .btn-gradient:hover {
+            background: linear-gradient(45deg, #fad0c4, #ff9a9e);
+            transform: scale(1.05);
+        }
+
+        /* Emoji Buttons */
+        .emoji-btn {
+            cursor: pointer;
+            font-size: 24px;
+            border: none;
+            background: none;
+            margin: 0 10px;
+            transition: transform 0.2s ease;
+        }
+
+        .emoji-btn:hover {
+            transform: scale(1.2);
+        }
+
+        /* Contact Form */
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: none;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* List Group */
+        .list-group-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="d-block w-100 img-fluid carousel-img" alt="Collaborative group">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1><b>Looking Aheads</b></h1>
+                    <p>The future of DEI in tech is about adaptability. While strategies may shift, the
+                        core mission remains: creating workplaces where all employees feel valued and empowered. As
+                        companies refine their approaches, the focus is on making DEI an integral part of company
+                        culture,
+                        ensuring that inclusion is not just a policy but a practice embedded in everyday work life.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://plus.unsplash.com/premium_photo-1686244745070-44e350da9d37?q=80&w=500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="d-block w-100 img-fluid carousel-img" alt="Entrepenours">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1><b>The Evolving Landscape of DEI in Tech 2025 Trends and Insights</b></h1>
+                    <p class="card-text">A Stronger Focus on Inclusion rather than broad initiatives, many companies are
+                        refining their DEI efforts by emphasizing inclusion at every level. This includes mentorship
+                        programs, equitable hiring practices, and employee resource groups (ERGs) that create a sense of
+                        belonging. Technology companies are also
+                        leveraging AI-driven analytics to track progress, making data-driven decisions to improve
+                        diversity in
+                        hiring and career development.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://plus.unsplash.com/premium_photo-1677529495665-2cf23dae0ffd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="d-block w-100 img-fluid carousel-img" alt="Empowering">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1><b>The Evolving Landscape of DEI in Tech 2025 Trends and Insights</b></h1>
+                    <p>A Stronger Focus on Inclusion rather than broad initiatives, many companies are
+                        refining their DEI efforts by emphasizing inclusion at every level. This includes mentorship
+                        programs, equitable hiring practices, and employee resource groups (ERGs) that create a sense of
+                        belonging. Technology companies are also leveraging AI-driven analytics to track progress,
+                        making data-driven decisions to improve diversity in
+                        hiring and career development.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+
+    <hr>
+    <!--Cookie fortune project-->
+    <div class="container text-center my-5">
+        <h3 class="text-light">🔮 Your Digital Cookie Fortune 🔮</h3>
+        <div class="mb-3">
+            <input type="text" id="userName" class="form-control text-center" placeholder="Enter your name">
+        </div>
+        <div class="mb-3">
+            <input type="number" id="userAge" class="form-control text-center" placeholder="Enter your age">
+        </div>
+        <div class="mb-3">
+            <select id="userDream" class="form-select text-center">
+                <option value="">What is your dream? (Select one)</option>
+                <option value="tech">Build cool tech</option>
+                <option value="travel">Travel the world</option>
+                <option value="entrepreneur">Start my own business</option>
+                <option value="mentor">Help and inspire others</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <select id="userVibe" class="form-select text-center">
+                <option value="">What's your vibe today? (Select one)</option>
+                <option value="adventurous">🌍 Adventurous</option>
+                <option value="focused">🔥 Focused</option>
+                <option value="chill">😎 Chill</option>
+                <option value="dreamy">🌙 Dreamy</option>
+            </select>
+        </div>
+        <button class="btn btn-warning btn-lg" onclick="generateFortune()">Reveal Your Fortune ✨</button>
+        <div id="fortuneDisplay" class="mt-4 p-3 text-light"
+            style="display: none; font-size: 1.3em; font-weight: bold;"></div>
+        <hr>
+    </div>
+    <!-- Image map with areas -->
+    <div class="col-md-10">
+        <div class="card p-4 shadow">
+            <img src="https://images.unsplash.com/photo-1607473332998-e53c0c6f0ab0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                id="Spacetime" alt="Spacetime" usemap="#Essential" class="card-img-top mb-3">
+             <!-- Image clickable areas --> 
+                <map name="Spacetime" id="Spacetime">
+
+                <!-- Rectangular Image click-->
+                <area shape="rect" coords="3214, 3272, 1917,1841" href="https://www.elevationchurch.org/studies"
+                    alt="The BiBle">
+                 <!-- Circle Image click-->
+
+                <area shape="circle" coords="1165, 868, 992" href="https://www.starbucks.com/menu/drinks/hot-coffee"
+                    alt="hot-coffee">
+
+                <!-- Poly Image click-->
+                <area shape="poly" coords="4762, 4931, 5020, 4962, 4784, 4687, 4531, 4189, 4216, 4207, 4353, 4504, 4664"
+                    href="https://www.zappos.com/women/wAEB4AEB4gICGBw.zso" alt="Shoes">
+            </map>
+            <div class="card-body">
+                <h3 class="card-title">Recharge 🔄 Working Map Images</h3>
+                <p class="card-text">Click on the the following for more details:</p>
+                <div class="col-md-12 text-center">
+                    <div class="cLearning Goalsard p-4 shadow">
+                        <h2>🎯🔄Reconnect 🔁🌐</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li>📖Bibile</li>
+                                    <li>☕Coffee</li>
+                                    <li>👟Shoes</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <ul>
+                                        <li>📖 <a href="https://www.elevationchurch.org/studies"
+                                                target="_blank">Elevation Church Studies</a></li>
+                                        <li>☕ <a href="https://www.starbucks.com/menu/drinks/hot-coffee"
+                                                target="_blank">Coffee</a></li>
+                                        <li>👟 <a href="https://www.zappos.com/women/wAEB4AEB4gICGBw.zso"
+                                                target="_blank">Women's Shoes</a></li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </hr>
+    <hr>
+    <!-- Technology & Networking Section -->
+    <div class="col-md-12 text-center">
+        <div class="card p-4 shadow">
+            <h2>🎯 Learning Goals 🌐</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li>💻 Master JavaScript and React</li>
+                        <li>🖥️ Improve backend development skills</li>
+                        <li>📊 Learn database management (SQL & NoSQL)</li>
+                        <li>☁️ Explore cloud computing (AWS, Azure)</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li>🔐 Gain cybersecurity knowledge</li>
+                        <li>⚡ Enhance problem-solving with algorithms</li>
+                        <li>📈 Work on data visualization & analytics</li>
+                        <li>🤖 Learn about AI & machine learning</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Explore More 🔍</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Card section-->
+    <div class="row justify-content-around">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://plus.unsplash.com/premium_photo-1681195079271-cbfd9ba1cbc7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="card-img-top mb-3" alt="Volunteering">
+                <div class="card-body">
+                    <h3 class="card-title">Volunteering</h3>
+                    <p class="card-text"> Engange in the community services.
+                        This program runs with community support. Get involved.</p>
+                    <button class="btn btn-primary" onclick="alert('Learn more about Volunteering!')">
+                        Learn More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="card-img-top mb-3" alt="Coding">
+            <div class="card-body">
+                <h3 class="card-title">Champion Women in Leadership</h3>
+                <p class="card-text"> Celebrate and amplify the voices of women leaders, entrepreneurs, and innovators.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-around">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1590650046871-92c887180603?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="card-img-top mb-3" alt="Mentoring" />
+                <div class="card-body">
+                    <h5 class="card-title">Mentoring or Ally</h5>
+                    <p class="card-text"> Support Diverse Communities: Advocate for inclusive hiring and workplace
+                        policies. Engage with and support organizations that work to empower underrepresented groups in
+                        tech.
+                        Share your knowledge and skills with someone just starting out. Even small acts of mentorship
+                        can have a big impact.</p>
+                    <button class="btn btn-primary" onclick="alert('Learn more about Mentoring!')">
+                        Learn More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card-body">
+                <h2>Reach out!</h2>
+                <form id="userForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                    <button type="submit">Submit</button>
+                </form>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </hr>
+    <hr>
+    <button onclick="goHome()" class="btn btn-primary mb-3">Back to Home</button>
+    </hr>
+    </section>
+    <script src="The_Hub.js"></script>
+    <script src="index.html"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

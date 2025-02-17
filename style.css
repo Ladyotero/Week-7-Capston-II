@@ -1,0 +1,146 @@
+/* the_Hub styles */
+body {
+    background: linear-gradient(to right, #111827, #1f2937);
+    color: #f3f4f6;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Interactive Links */
+a {
+    color: #3b82f6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #60a5fa;
+    text-decoration: underline;
+}
+
+/* Carousel Styling */
+.carousel {
+    margin: 40px auto;
+    width: 90%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-inner {
+    border-radius: 15px;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 500px;
+    border-radius: 15px;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Cards */
+.card {
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: #f3f4f6;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+/* Interactive Buttons */
+.btn-primary {
+    background: linear-gradient(45deg, #4f46e5, #6366f1);
+    border: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(79, 70, 229, 0.5);
+}
+
+/* Gradient Buttons */
+.btn-gradient {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(45deg, #fad0c4, #ff9a9e);
+    transform: scale(1.05);
+}
+
+/* Emoji Buttons */
+.emoji-btn {
+    cursor: pointer;
+    font-size: 24px;
+    border: none;
+    background: none;
+    margin: 0 10px;
+    transition: transform 0.2s ease;
+}
+
+.emoji-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Contact Form */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+}
+
+input:focus, select:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Footer */
+footer {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* List Group */
+.list-group-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
