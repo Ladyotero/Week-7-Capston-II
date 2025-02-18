@@ -91,7 +91,7 @@ let name = document.getElementById("userName").value.trim();
      // Initialize the image map on the page load(the hub page)
      $(document).ready(function () {
         // Make the image map responsive
-        $('Breakfast-map-image').mapster({
+        $('Spacetime').mapster({
             fillColor: 'ff0000',  // Highlight color
             fillOpacity: 0.5,    // Highlight opacity
             stroke: true,        // Outline around regions

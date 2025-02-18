@@ -1,6 +1,6 @@
 'use strict';
 
-function initSuccessStoryForm() {
+function initialSuccessStoryForm() {
     const form = document.getElementById("success-story-form");
     const storyContainer = document.getElementById("women_in_tech");
 
@@ -266,4 +266,62 @@ document.querySelectorAll(".hobby-btn").forEach(button => {
         }
     });
 });
-    
+async function fetchTVShows() {
+    const loadingText = document.getElementById("loading");
+    const table = document.getElementById("tvShowTable");
+    const tbody = table.querySelector("tbody");
+
+    loadingText.style.display = "block";
+    table.style.display = "none";
+
+    try {
+        // Static list of top 4 TV shows
+        const topShows = [
+            {
+                name: "The White Lotus",
+                premiered: "2025-01-10",
+                genres: ["Drama", "Satire"],
+                image: "https://tse2.mm.bing.net/th?id=OIF.HEKBY2XijdelQijaHtjjdg&pid=Api"
+            },
+            {
+                name: "Severance",
+                premiered: "2025-02-15",
+                genres: ["Drama", "Thriller", "Science Fiction"],
+                image: "https://tse1.mm.bing.net/th?id=OIF.OjOu05mP9Svq0fHbK9XT1w&pid=Api"
+            },
+            {
+                name: "Reacher",
+                premiered: "2025-03-20",
+                genres: ["Action", "Crime", "Drama"],
+                image: "https://tse3.mm.bing.net/th?id=OIF.NaEimPFl7BuKCtpyS2SYgA&pid=Api"
+            },
+            {
+                name: "Zero Day",
+                premiered: "2025-04-25",
+                genres: ["Thriller", "Political Drama"],
+                image: "https://tse2.mm.bing.net/th?id=OIF.a9rsE7qNB2zDMbY6TiUO7g&pid=Api"
+            }
+        ];
+
+        tbody.innerHTML = "";
+        topShows.forEach((show, index) => {
+            const genres = show.genres.join(", ");
+            const image = show.image;
+
+            tbody.innerHTML += `
+                <tr>
+                    <td>${index + 1}</td>
+                    <td>📺 ${show.name}</td>
+                    <td>📅 ${show.premiered}</td>
+                    <td>🎭 ${genres}</td>
+                    <td><img src="${image}" alt="Show Poster"></td>
+                </tr>
+            `;
+        });
+        table.style.display = "table";
+    } catch (error) {
+        alert("⚠️ Error fetching data!");
+    } finally {
+        loadingText.style.display = "none";
+    }
+}
