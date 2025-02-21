@@ -92,16 +92,49 @@ let name = document.getElementById("userName").value.trim();
      $(document).ready(function () {
         // Make the image map responsive
         $('Spacetime').mapster({
-            fillColor: 'ff0000',  // Highlight color
-            fillOpacity: 0.5,    // Highlight opacity
-            stroke: true,        // Outline around regions
-            strokeColor: '0000ff',// Border color
-            strokeWidth: 2, //Border thickness
-            isSelectable: false, // Disable selecting areas
-            scaleMap: true       // Enable responsive scaling
         });
     });
+
+    // weather-Format
+    async function getWeather(event) {
+        event.preventDefault();
+
+        const city = document.getElementById("cityinput").value;
+        const country = document.getElementById("countryinput").value;
+        const weatherDiv = document.getElementById("weatherdiv");
+
+        const formattedCity = encodeURIComponent(city);
+        const formattedCountry = encodeURIComponent(country);
+        const APIKey = "b26f4c6f1777421b985b7848d83823e1";
+
+        try {
+            const response = await axios.get(`https://api.weatherbit.io/v2.0/current?city=${formattedCity}&country=${formattedCountry}&key=${APIKey}`);
+            
+            const data = response.data.data[0];
+
+            let cardlayout = `
+            <div class="card mx-auto mt-3" style="width: 22rem;">
+                <div class="card-header bg-primary text-white">
+                    🌆 ${data.city_name}, ${country.toUpperCase()}
+                </div>
+                <div class="card-body">
+                    <p>🌅 <strong>Sunrise:</strong> ${data.sunrise}</p>
+                    <p>🌇 <strong>Sunset:</strong> ${data.sunset}</p>
+                    <p>🌡 <strong>Temperature:</strong> ${data.temp}°F</p>
+                    <p>⛅ <strong>Weather:</strong> ${data.weather.description}</p>
+                </div>
+            </div>`;
+
+            weatherDiv.innerHTML = cardlayout;
+        } catch (error) {
+            console.error("Error fetching weather data:", error);
+            weatherDiv.innerHTML = "<p class='text-danger'>⚠️ Error fetching weather data. Please check your city and country names.</p>";
+        }
+    }
+
+    document.getElementById("weatherForm").addEventListener("submit", getWeather);
+    
 // Navigation Function
-window.goHome = function () {
+document.getElementById("homeButton").addEventListener("click", function () {
     window.location.href = "index.html";
-}
+});

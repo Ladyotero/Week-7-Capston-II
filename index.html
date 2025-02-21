@@ -9,145 +9,160 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <style>
-        body {
-            background: linear-gradient(to right, #111827, #1f2937);
-            color: #f3f4f6;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .navbar {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .navbar-brand {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #fff;
-        }
-
-        .card {
-            border-radius: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            color: #f3f4f6;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .btn-primary {
-            background-color: #3b82f6;
-            border-color: #3b82f6;
-            transition: transform 0.2s;
-        }
-
-        .btn-primary:hover {
-            background-color: #2563eb;
-            transform: scale(1.05);
-        }
-
-        .emoji-btn {
-            cursor: pointer;
-            font-size: 24px;
-            border: none;
-            background: none;
-            margin: 0 10px;
-        }
-
-        .emoji-btn:hover {
-            transform: scale(1.2);
-        }
-
-        .container {
-            background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
-            /* Dark gray gradient */
-            color: white;
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
-        }
-
-        .btn-gradient {
-            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            font-size: 18px;
-            border-radius: 10px;
-            transition: 0.3s ease;
-        }
-
-        .btn-gradient:hover {
-            background: linear-gradient(45deg, #fad0c4, #ff9a9e);
-            transform: scale(1.05);
-        }
-
-        .text-trendy {
+    body {
+    background: linear-gradient(to right, #1e1e2e, #25253d);
+    color: #f4f4f4;
     font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(30, 30, 46, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
     font-weight: bold;
-    color: #ffffff;
-    text-shadow: 2px 2px 0px #ff8a00, 4px 4px 0px #e52e71;
-        }
+    color: #ffcc00;
+}
 
-        footer {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-        }
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
 
-        .list-group-item {
-            background: rgba(255, 255, 255, 0.1);
-            /* Semi-transparent background */
-            border-radius: 10px;
-            margin-bottom: 10px;
-        }
+.navbar-nav .nav-link:hover {
+    color: #ffcc00;
+}
 
-        .btn-primary {
-            background-color: #4f46e5;
-            /* Vibrant blue */
-            border: none;
-        }
+/* Header */
+header {
+    padding: 50px 20px;
+}
 
-        .btn-primary:hover {
-            background-color: #6366f1;
-        }
-        /* Spinner Github Styles */
-        .spinner {
-            display: none;
-            width: 20px;
-            height: 20px;
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid #3498db;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        /* Hobby Message Styling */
-#hobby-message {
+h6 {
     font-size: 1.2rem;
-    font-weight: 500;
-    color: #333;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Resume Button */
+.btn-primary {
+    background: linear-gradient(45deg, #ffcc00, #ff8800);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #ff8800, #ff5500);
+}
+
+/* Cards */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Hobbies Section */
+.hobby-btn {
+    font-size: 1rem;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.hobby-btn:hover {
+    transform: scale(1.1);
+    background-color: #ffcc00 !important;
+    color: black;
+}
+
+/* Accordion */
+.accordion-button {
+    font-size: 1.2rem;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.accordion-button:hover {
+    background-color: #ffcc00;
+    color: black;
+}
+
+/* Emoji Shuffle */
+#emojiDisplay {
+    font-size: 4rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+#emojiDisplay:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* Work-Life Balance Tips */
+.tip-container input {
+    border-radius: 20px;
     text-align: center;
     padding: 10px;
-    background: #e9ecef;
-    border-radius: 8px;
-    transition: background 0.3s ease, color 0.3s ease;
+    font-size: 1rem;
 }
 
-/* Responsive Spacing */
-@media (max-width: 576px) {
-    .d-flex.flex-wrap {
-        justify-content: center;
-    }
-
-    .hobby-btn {
-        width: 100%;
-        text-align: center;
-    }
+.tip-container button {
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-size: 1rem;
+    transition: 0.3s;
 }
-        
+
+.tip-container button:hover {
+    background-color: #ffcc00;
+    color: black;
+}
+
+/* Weather App */
+#weatherForm input {
+    border-radius: 25px;
+    padding: 12px;
+    font-size: 1.1rem;
+}
+
+#fetchWeatherBtn {
+    background: linear-gradient(45deg, #ffcc00, #ff8800);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+#fetchWeatherBtn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #ff8800, #ff5500);
+}
     </style>
 </head>
 
@@ -171,19 +186,20 @@
     <header class="text-center p-5">
         <h1 class="text-primary">Welcome to My Journey</h1>
         <hr>
-        <h6 class="navbar-collapse">"The future belongs to those who believe in the beauty of the dreams" -Elanor Roosevelt</h6>
-    </hr>
+        <h6 class="navbar-collapse">"The future belongs to those who believe in the beauty of the dreams" -Elanor
+            Roosevelt</h6>
+        </hr>
         </div>
         <hr>
         <a class="btn btn-primary me-2"
             href="https://drive.google.com/file/d/1TxfYyZZikcfrRSC6TNRIZRazagiYlLTB/view?usp=drive_link">Resume</a>
- 
+
         <ul class="list-unstyled">
             <li>
                 <a href="https://www.linkedin.com/feed/" target="_blank" aria-label="LinkedIn Profile">LinkedIn</a>
             </li>
         </ul>
-    </hr>
+        </hr>
         </div>
     </header>
     <div class="container my-5">
@@ -237,8 +253,8 @@
             <div class="col-md-6">
                 <div class="card p-4 shadow">
                     <h2>🚀 My Tech Skills</h2>
-                    <p>I have a strong foundation in <strong>JavaScript, HTML, CSS,</strong> and responsive design. 
-                        I am obtaining experience with various frameworks. I also have a strong understanding of 
+                    <p>I have a strong foundation in <strong>JavaScript, HTML, CSS,</strong> and responsive design.
+                        I am obtaining experience with various frameworks. I also have a strong understanding of
                         project management tools like <strong>Jira</strong> and <strong>Asana</strong>.</p>
                     <p>I am currently learning new languages and exploring cutting-edge technologies.</p>
                     <a href="#" class="btn btn-primary">Learn More 💻</a>
@@ -309,77 +325,80 @@
                 </defs>
             </svg>
         </div>
-    </div> 
-      <!-- Key Principles Section -->
-<div class="container my-5">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <h3 class="text-center mb-4 text-light">✨ Key Principles to Embrace ✨</h3>
-            <div class="accordion" id="keyPrinciples">
-                <div class="accordion-item bg-transparent border-light">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button bg-dark text-light fw-bold shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#principle1" aria-expanded="true">
-                            🚀 Dream Big, Achieve Bigger 🚀
-                        </button>
-                    </h2>
-                    <div id="principle1" class="accordion-collapse collapse show" data-bs-parent="#keyPrinciples">
-                        <div class="accordion-body text-light">
-                            The future belongs to those who believe in the beauty of their dreams.
+    </div>
+    <!-- Key Principles Section -->
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h3 class="text-center mb-4 text-light">✨ Key Principles to Embrace ✨</h3>
+                <div class="accordion" id="keyPrinciples">
+                    <div class="accordion-item bg-transparent border-light">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button bg-dark text-light fw-bold shadow-sm" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#principle1" aria-expanded="true">
+                                🚀 Dream Big, Achieve Bigger 🚀
+                            </button>
+                        </h2>
+                        <div id="principle1" class="accordion-collapse collapse show" data-bs-parent="#keyPrinciples">
+                            <div class="accordion-body text-light">
+                                The future belongs to those who believe in the beauty of their dreams.
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item bg-transparent border-light">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed bg-dark text-light fw-bold shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#principle2">
-                            💡 Innovation & Collaboration 💡
-                        </button>
-                    </h2>
-                    <div id="principle2" class="accordion-collapse collapse" data-bs-parent="#keyPrinciples">
-                        <div class="accordion-body text-light">
-                            Innovation thrives where diversity and collaboration intersect.
+                    <div class="accordion-item bg-transparent border-light">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-dark text-light fw-bold shadow-sm"
+                                type="button" data-bs-toggle="collapse" data-bs-target="#principle2">
+                                💡 Innovation & Collaboration 💡
+                            </button>
+                        </h2>
+                        <div id="principle2" class="accordion-collapse collapse" data-bs-parent="#keyPrinciples">
+                            <div class="accordion-body text-light">
+                                Innovation thrives where diversity and collaboration intersect.
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item bg-transparent border-light">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed bg-dark text-light fw-bold shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#principle3">
-                            🌟 Empowering Women in Tech 🌟
-                        </button>
-                    </h2>
-                    <div id="principle3" class="accordion-collapse collapse" data-bs-parent="#keyPrinciples">
-                        <div class="accordion-body text-light">
-                            Supporting women in technology fosters a stronger future.
+                    <div class="accordion-item bg-transparent border-light">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-dark text-light fw-bold shadow-sm"
+                                type="button" data-bs-toggle="collapse" data-bs-target="#principle3">
+                                🌟 Empowering Women in Tech 🌟
+                            </button>
+                        </h2>
+                        <div id="principle3" class="accordion-collapse collapse" data-bs-parent="#keyPrinciples">
+                            <div class="accordion-body text-light">
+                                Supporting women in technology fosters a stronger future.
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-        <!-- Emoji Shuffle Feature -->
-        <div class="container text-center my-5">
-            <h3 class="text-light">🔥Click to Get a Trendy Emoji 🔥</h3>
-            <div id="emojiDisplay" class="display-1 my-3 text-light">😎</div>
-            <button class="btn btn-primary mt-2" onclick="showRandomEmoji()">Shuffle Emoji</button>
-        </div>
+    <!-- Emoji Shuffle Feature -->
+    <div class="container text-center my-5">
+        <h3 class="text-light">🔥Click to Get a Trendy Emoji 🔥</h3>
+        <div id="emojiDisplay" class="display-1 my-3 text-light">😎</div>
+        <button class="btn btn-primary mt-2" onclick="showRandomEmoji()">Shuffle Emoji</button>
+    </div>
 
-        <!-- Diversity, Equity, and Inclusion Section -->
-        <div class="container my-5">
-            <h2 class="text-center">
-                <p>“DEI is not a threat, it's a gift,” -Alicia Keys.</p>
-            </h2>
-            <p>Embracing diversity in the workplace fosters
-                creativity, innovation, and improved problem-solving. Inclusive teams, enriched by diverse
-                perspectives, promote equitable opportunities and drive organizational success. Prioritizing
-                diversity enhances collaboration and builds resilient organizations. A healthy work-life balance
-                is essential for employee well-being and productivity. By encouraging flexible work environments
-                and respecting personal boundaries, organizations empower employees to achieve harmony between
-                their professional and personal lives, leading to higher morale and job satisfaction. Empowering
-                individuals through technology and inclusive policies creates opportunities for underrepresented
-                groups, especially women and minorities. Advocacy for equitable hiring, mentorship, and
-                leadership roles drives meaningful progress, building workplaces where everyone thrives.</p>
+    <!-- Diversity, Equity, and Inclusion Section -->
+    <div class="container my-5">
+        <h2 class="text-center">
+            <p>“DEI is not a threat, it's a gift,” -Alicia Keys.</p>
+        </h2>
+        <p>Embracing diversity in the workplace fosters
+            creativity, innovation, and improved problem-solving. Inclusive teams, enriched by diverse
+            perspectives, promote equitable opportunities and drive organizational success. Prioritizing
+            diversity enhances collaboration and builds resilient organizations. A healthy work-life balance
+            is essential for employee well-being and productivity. By encouraging flexible work environments
+            and respecting personal boundaries, organizations empower employees to achieve harmony between
+            their professional and personal lives, leading to higher morale and job satisfaction. Empowering
+            individuals through technology and inclusive policies creates opportunities for underrepresented
+            groups, especially women and minorities. Advocacy for equitable hiring, mentorship, and
+            leadership roles drives meaningful progress, building workplaces where everyone thrives.</p>
 
-            <pre>
+        <pre>
                 DEI Strategies:
               - To provide everyone with the resources they need to succeed.
               - Focuses on fairness and justice in policies, practices, 
@@ -388,12 +407,12 @@
               - To ensure a mix of perspectives and backgrounds.
 </pre>
 
-        </div>
-        <!-- Mental Health & Work-Life Balance -->
-        <div class="container my-5">
-            <h1 class="text-center">Mental Health & Work-Life Balance Tips</h1>
-            <p class="text-center">Manage your time wisely and keep a healthy balance!</p>
-            <pre class="text-center">
+    </div>
+    <!-- Mental Health & Work-Life Balance -->
+    <div class="container my-5">
+        <h1 class="text-center">Mental Health & Work-Life Balance Tips</h1>
+        <p class="text-center">Manage your time wisely and keep a healthy balance!</p>
+        <pre class="text-center">
         <hr>
         <pre> 
         Tips for Work-Life Balance:
@@ -402,54 +421,71 @@
         3. Take mental health breaks throughout the day.
         </hr>
         </pre>
+    </div>
+    <!-- Work-Life Balance Tips Section -->
+    <div class="container my-5">
+        <h2 class="text-center">💼✨ ✨💼</h2>
+        <div class="text-center mt-3">
+            <button id="generate-tip" class="btn btn-success">🎲 Get a Random Tip</button>
+            <p id="random-tip" class="mt-3 fw-bold"></p>
         </div>
-        <!-- Work-Life Balance Tips Section -->
-        <div class="container my-5">
-            <h2 class="text-center">💼✨ ✨💼</h2>
-            <div class="text-center mt-3">
-                <button id="generate-tip" class="btn btn-success">🎲 Get a Random Tip</button>
-                <p id="random-tip" class="mt-3 fw-bold"></p>
-            </div>
-            <!-- User Input for Tips -->
-            <div class="mt-4 tip-container text-center">
-                <h4>📝 Add Your Own Work-Life Tip</h4>
-                <input type="text" id="new-work-life-tip" class="form-control w-50 mx-auto"
-                    placeholder="Type your tip here...">
-                <button id="add-work-life-tip" class="btn btn-primary mt-2">➕ Add Tip</button>
-            </div>
-            <!-- Display User Tips -->
-            <ul id="work-life-tips" class="list-group mt-3"></ul>
+        <!-- User Input for Tips -->
+        <div class="mt-4 tip-container text-center">
+            <h4>📝 Add Your Own Work-Life Tip</h4>
+            <input type="text" id="new-work-life-tip" class="form-control w-50 mx-auto"
+                placeholder="Type your tip here...">
+            <button id="add-work-life-tip" class="btn btn-primary mt-2">➕ Add Tip</button>
         </div>
+        <!-- Display User Tips -->
+        <ul id="work-life-tips" class="list-group mt-3"></ul>
+    </div>
+    <hr>
+    <div id="event-box" class="text-center">
+        <p id="event-text"></p>
+    </div>
+    <hr>
+        <!--Bootstrap form Validation-->
+        <body class="container mt-5">
+            <h2 class="text-center">🌍 Weather App</h2>
+            
+            <form id="weatherForm" class="p-4 border rounded shadow-sm bg-light">
+                <div class="mb-3">
+                    <label for="cityinput" class="form-label">🏙 City Name</label>
+                    <input type="text" id="cityinput" class="form-control" placeholder="Enter city name" aria-label="City name input" required>
+                </div>
+                <div class="mb-3">
+                    <label for="countryinput" class="form-label">🌎 Country Code (e.g., US)</label>
+                    <input type="text" id="countryinput" class="form-control" placeholder="Enter country code" aria-label="Country code input" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">🔍 Get Weather</button>
+            </form>        
+        </hr>
         <hr>
-            <div id="event-box" class="text-center">
-                <p id="event-text"></p>
-            </div>
+        <!-- GitHub Data Fetching with Spinner -->
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-8 text-center">
+                <h2>GitHub Profile</h2>
 
-    <!-- GitHub Data Fetching with Spinner -->
-    <div class="row justify-content-center mt-5">
-        <div class="col-md-8 text-center">
-            <h2>GitHub Profile</h2>
+                <!-- Spinner (Initially Hidden) -->
+                <h2>GitHub User: <span id="Ladyotero">Loading...</span></h2>
+                <h3>Public Repositories: <span id="Card-Game">Loading...</span></h3>
 
-            <!-- Spinner (Initially Hidden) -->
-            <h2>GitHub User: <span id="Ladyotero">Loading...</span></h2>
-            <h3>Public Repositories: <span id="Card-Game">Loading...</span></h3>
-        
-            <!-- Loading Spinner -->
-            <div id="github-spinner" class="spinner"></div>
-        
-            <button onclick="fetchGitHubData()">Load GitHub Data</button>
+                <!-- Loading Spinner -->
+                <div id="github-spinner" class="spinner"></div>
+
+                <button onclick="fetchGitHubData()">Load GitHub Data</button>
             </div>
         </div>
     </div>
-</div>
-            <!-- Footer -->
-            <footer class="text-center p-3 bg-dark text-light mt-4">
-                <p>&copy; 2025 My Journey | All rights reserved.</p>
-            </footer>
-            <script src="script.js"></script>
-            <script src="women_in_tech.js"></script>
-            <script src="The_Hub.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
+    <!-- Footer -->
+    <footer class="text-center p-3 bg-dark text-light mt-4">
+        <p>&copy; 2025 My Journey | All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="women_in_tech.js"></script>
+    <script src="The_Hub.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
